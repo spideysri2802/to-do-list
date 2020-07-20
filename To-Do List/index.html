@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+
+        .header{
+            text-align: center;
+
+        }
+
+        #checklist{
+            font-size:1em;
+        }
+
+        .checkbox{
+            width: 30px;
+            height: 30px;
+        }
+
+        #checkitem{
+            width: 2em;
+            height: 2em;
+        }
+
+        #checkitemLabel{
+            font-size: 2em;
+        }
+
+        .addButton{
+            font-size: 2em;
+            padding:1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="header">To-Do List</h1>
+
+    <div id="checklist"></div>
+
+    <button class="addButton" onclick="addItem()">+</button>
+
+    <script>
+        
+        function addItem() {
+            var checklist = document.getElementById("checklist");
+            var checkbox = document.createElement('input');
+            var label = document.createElement('label');
+            var item = prompt("Add item:");
+
+            console.log("user typed: " + item)
+
+            checkbox.type = "checkbox";
+            checkbox.name = "todoitem";
+            checkbox.value = "value";
+            checkbox.id = "checkitem";
+            checkbox.addEventListener('click', alert);
+
+            label.htmlFor = "checkitem";
+            label.id = "checkitemLabel";
+            label.appendChild(document.createTextNode(item)); 
+
+            checklist.appendChild(checkbox);
+            checklist.appendChild(label);
+            checklist.innerHTML += "<br>";
+
+        }
+
+        function checked() {
+            var checkitem = document.getElementById("checkitem");
+            if (checkitem[0].checked){
+            alert("good job!")
+            }
+        }
+
+
+    
+
+    </script>
+</body>
+</html>
