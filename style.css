@@ -1,0 +1,32 @@
+.header{
+    text-align: center;
+
+}
+
+#checklist{
+    font-size:1em;
+}
+
+.checkbox{
+    width: 30px;
+    height: 30px;
+}
+
+#checkitem{
+    width: 2em;
+    height: 2em;
+}
+
+#checkitemLabel{
+    font-size: 2em;
+}
+
+.addButton{
+    font-size: 2em;
+    padding:1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+
+}
